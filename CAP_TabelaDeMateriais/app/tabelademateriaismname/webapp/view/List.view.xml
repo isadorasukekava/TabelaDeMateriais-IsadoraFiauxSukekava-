@@ -1,0 +1,32 @@
+<mvc:View controllerName="tabelademateriaismname.controller.List"
+   xmlns:mvc="sap.ui.core.mvc"
+   xmlns="sap.m">
+   <Page title="Tabela de Materiais">
+       <content>
+           <VBox>
+               <HBox>
+                   <Input id="inputQuantidade" placeholder="Digite a quantidade" />
+                   <Button text="Filtrar" press="onFiltrar" />
+               </HBox>
+               <Table items="{tableMaterial>/tableMaterial}">
+                   <columns>
+                       <Column><Text text="ID" /></Column>
+                       <Column><Text text="NumMat" /></Column>
+                       <Column><Text text="Nome" /></Column>
+                       <Column><Text text="Descr" /></Column>
+                   </columns>
+                   <items>
+                       <ColumnListItem>
+                           <cells>
+                               <Text text="{tableMaterial>ID}" />
+                               <Text text="{tableMaterial>NumMat}" />
+                               <Text text="{tableMaterial>Nome}" />
+                               <Text text="{tableMaterial>Descr}" />
+                           </cells>
+                       </ColumnListItem>
+                   </items>
+               </Table>
+           </VBox>
+       </content>
+   </Page>
+</mvc:View>
